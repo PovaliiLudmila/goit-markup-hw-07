@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --primary-text-color:#434455;
     --navy-blue-color:#2E2F42;
     --accent-color:#4D5AE5;
@@ -26,8 +26,34 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+}*/
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
 }
-.visually-hidden {
+
+@media screen and (min-width: 480px) {
+    .container {
+        width: 428px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1158px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/*.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -831,4 +857,4 @@ body {
 .modal-form-submit:hover,
 .modal-form-submit:focus {
     background-color: var(--accent-color);
-}
+} */
