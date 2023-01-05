@@ -25,13 +25,54 @@ body {
     font-family: Roboto, sans-serif;
 }
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
 }
 .list {
     list-style: none;
+}
+.modal {
+    position: absolute;
+    width: 408px;
+    height: 584px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #FCFCFC;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 24px;
+    padding-top: 72px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+
+}
+@media screen and (min-width: 320px) {
+.hero {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    max-width: 767px;
+    text-align: center;
+    padding-top: 112px;
+    padding-bottom: 112px;
+    height:432px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color:rgba(46, 47, 66, 0.7);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile.webp);
+    }
+    
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        .hero {
+          background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), url(../images/hero-mobile@2x.webp);
+        }
+    }
 }
 @media screen and (min-width: 480px) {
     .container {
@@ -111,8 +152,8 @@ body {
     }
     .mobile-menu__close-btn {
         position: absolute;
-        top: 40px;
-        right: 40px;
+        top: 24px;
+        right: 22px;
         background-color: transparent;
         border: none;
         padding: 0;
@@ -148,9 +189,20 @@ body {
     .mobile-link-menu:focus {
         color: var(--color-ocean);
     }
-    .mobile-navigation-link {
-        margin-bottom: 40px;
+    .mobile-navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
+        margin-bottom: 284px;
     }
+    .mobile-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 48px;
+    }
+
     .mobile-tel {
         font-weight: 600;
         font-size: 36px;
@@ -163,9 +215,6 @@ body {
     .mobile-tel:focus {
         color: var(--accent-color);
     }
-    .mobile-contacts {
-        margin-top: 24px;
-    }
     .mobile-email {
         font-weight: 500;
         font-size: 20px;
@@ -177,6 +226,59 @@ body {
     .mobile-email:hover,
     .mobile-email:focus {
         color: var(--accent-color);
+    }
+    .mobile-social-list {
+        display: flex;
+        align-items: center;
+    }
+    .mobile-social-list-icon:not(:last-child) {
+        margin-right: 56px;
+    }
+    .mobile-social-list-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:var(--accent-color);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: var(--cloud-color);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .hero-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: var(--primary-bg-color);
+        margin-bottom: 72px;
+    }
+    .modal {
+        width: 392px;
+        height: 586px;
+    }
+    .title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: var(--navy-blue-color);
+        margin-bottom: 8px;
+    }
+    .item-icon {
+        margin-top: 96px;
+        margin-bottom: 72px;
+    }
+    .text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--primary-text-color);
     }
 }
 
@@ -276,6 +378,12 @@ body {
     .contact .contacts:focus {
         color: var(--accent-color);
     }
+    
+}
+@media screen and (max-width: 1999px) {
+    .item-icon-benefits {
+        display: none;
+    }
 }
 /*for desktop*/
 @media screen and (min-width: 1200px) {
@@ -296,7 +404,7 @@ body {
         margin-right: 40px;
     }
 }
-/*.visually-hidden {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -306,13 +414,7 @@ body {
     border: 0;
     clip: rect(0 0 0 0);
 }
-
-
-
-
-
-
-
+/*
 .hero {
     text-align: center;
     padding-top: 192px;
@@ -336,7 +438,7 @@ body {
     line-height: 1.07;
     letter-spacing: 0.02em;
     margin-bottom: 48px;
-}
+}*/
 .button.primary {
     background-color: var(--accent-color);
     color: var(--primary-bg-color);
@@ -362,6 +464,7 @@ body {
 .button.primary:active {
     background-color: var(--color-button);
 }
+/*
 .section-team {
     background:var(--cloud-color);
     padding-top: 120px;
@@ -798,7 +901,7 @@ body {
 .subscribe-icon {
     fill: currentColor;
 }
-
+*/
 .backdrop {
     position: fixed;
     top: 0;
@@ -817,21 +920,7 @@ body {
 .backdrop.is-hidden .modal {
     transform: translate(-50%,-50%) scale(1.3);
 }
-.modal {
-    position: absolute;
-    width: 408px;
-    height: 584px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background: #FCFCFC;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding-left: 24px;
-    padding-top: 72px;
-    padding-right: 24px;
-    padding-bottom: 24px;
 
-}
 .modal-close-btn {
     position: absolute;
     top: 24px;
@@ -994,4 +1083,4 @@ body {
 .modal-form-submit:hover,
 .modal-form-submit:focus {
     background-color: var(--accent-color);
-} */
+} 
