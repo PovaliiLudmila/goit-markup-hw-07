@@ -157,12 +157,14 @@ body {
         line-height: 1.11;
         text-transform: capitalize;
         text-decoration: none;
-        color: var(--primary-text-color);
-        
+        color: var(--primary-text-color);  
     }
     .mobile-tel:hover,
     .mobile-tel:focus {
         color: var(--accent-color);
+    }
+    .mobile-contacts {
+        margin-top: 24px;
     }
     .mobile-email {
         font-weight: 500;
@@ -175,6 +177,7 @@ body {
     .mobile-email:hover,
     .mobile-email:focus {
         color: var(--accent-color);
+    }
 }
 
 /*for tablet*/
