@@ -278,7 +278,7 @@ body {
     }
     
     .subscribe-btn-img {
-        fill: #FFFFFF;   
+        fill: var(--primary-bg-color);   
     }
     .subscribe-btn-input {
         font-family: 'Roboto';
@@ -287,7 +287,7 @@ body {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: #FFFFFF;
+        color: var(--primary-bg-color);
     }
     .subscribe-btn {
         display:flex;
@@ -302,7 +302,7 @@ body {
         width: 165px;
         height: 40px;
         cursor: pointer;
-        color: #FFFFFF;
+        color: var(--primary-bg-color);
         margin-top: 15px; 
     }
     .subscribe-icon {
@@ -465,6 +465,7 @@ body {
     .mobile-social-list {
         display: flex;
         align-items: center;
+       
     }
     .mobile-social-list-icon:not(:last-child) {
         margin-right: 56px;
