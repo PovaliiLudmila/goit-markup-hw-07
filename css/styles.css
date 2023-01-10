@@ -94,7 +94,6 @@ body {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    max-height: 796px;
     z-index: 1000;
     background-color: #FFFFFF;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -186,7 +185,6 @@ body {
 .mobile-social-list {
     display: flex;
     align-items: center;
-   
 }
 .mobile-social-list-icon:not(:last-child) {
     margin-right: 56px;
