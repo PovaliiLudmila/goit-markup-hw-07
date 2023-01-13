@@ -616,8 +616,26 @@ body {
         flex-wrap: wrap;
         row-gap: 48px;
     }
-    
+    .portfolio-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: var(--navy-blue-color);
+    }
+    .portfolio-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--primary-text-color);
+        margin-top: 8px;
+    }
+    .cards {
+        max-width: 396px;
+    }
 }
+
 /*for tablet*/
 @media screen and (min-width: 768px) {
     .container {
@@ -765,6 +783,7 @@ body {
     }
     .cards {
         flex-basis: calc((100% - 24px) / 2);
+        max-width: 356px;
     }
     
 }
@@ -962,7 +981,9 @@ body {
     }
     .cards {
         flex-basis: calc((100% - 48px) / 3);
+        max-width: 360px;
     }
+    
 }
 .visually-hidden {
     position: absolute;
